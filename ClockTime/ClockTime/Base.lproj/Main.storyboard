@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Light</string>
+        </array>
+        <array key="digital-7.ttf">
+            <string>Digital-7</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClockTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxK-5P-jfd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="80"/>
+                                <color key="textColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy6-1G-Yu7">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Eed-bP-3Lz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                <color key="tintColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Show Settings">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.99489795918367352" green="0.98979591836734693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MEG-QM-hO9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xo-re-3Ar">
+                                <rect key="frame" x="16" y="470" width="343" height="139"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yrp-m4-FjP">
+                                        <rect key="frame" x="20" y="37" width="291" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="WBC-Ao-klL"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="White"/>
+                                            <segment title="Black"/>
+                                            <segment title="Red"/>
+                                            <segment title="Green"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="clockColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jx9-DJ-ahd"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfa-tn-xr1">
+                                        <rect key="frame" x="20" y="8" width="301" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="qXp-sH-gDg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BpB-ot-5Gk">
+                                        <rect key="frame" x="21" y="101" width="291" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="fIW-NT-jM7"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Black"/>
+                                            <segment title="White"/>
+                                            <segment title="Yellow"/>
+                                            <segment title="Blue"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="clockBackgroundColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="f7Z-vZ-5fm"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8j-gb-Px7">
+                                        <rect key="frame" x="21" y="72" width="301" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="8RQ-Rs-4P5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Y8j-gb-Px7" firstAttribute="leading" secondItem="9Xo-re-3Ar" secondAttribute="leading" constant="21" id="0CW-se-6HY"/>
+                                    <constraint firstItem="BpB-ot-5Gk" firstAttribute="leading" secondItem="9Xo-re-3Ar" secondAttribute="leading" constant="21" id="1MJ-oG-3MI"/>
+                                    <constraint firstItem="BpB-ot-5Gk" firstAttribute="top" secondItem="Y8j-gb-Px7" secondAttribute="bottom" constant="8" id="80F-W0-FWr"/>
+                                    <constraint firstAttribute="trailing" secondItem="BpB-ot-5Gk" secondAttribute="trailing" constant="31" id="BkN-Ju-0Gq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yrp-m4-FjP" secondAttribute="trailing" constant="32" id="GNL-6R-Rch"/>
+                                    <constraint firstAttribute="height" constant="139" id="MRJ-Be-97y"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y8j-gb-Px7" secondAttribute="trailing" constant="21" id="V65-Lw-Kys"/>
+                                    <constraint firstAttribute="bottom" secondItem="BpB-ot-5Gk" secondAttribute="bottom" constant="11" id="bhQ-32-0xF"/>
+                                    <constraint firstItem="Y8j-gb-Px7" firstAttribute="top" secondItem="Yrp-m4-FjP" secondAttribute="bottom" constant="8" id="cuU-aa-spD"/>
+                                    <constraint firstItem="Pfa-tn-xr1" firstAttribute="leading" secondItem="9Xo-re-3Ar" secondAttribute="leading" constant="20" id="eCg-bP-n4z"/>
+                                    <constraint firstItem="Pfa-tn-xr1" firstAttribute="top" secondItem="9Xo-re-3Ar" secondAttribute="top" constant="8" id="h8m-yZ-0uI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pfa-tn-xr1" secondAttribute="trailing" constant="22" id="hq5-eT-Ozj"/>
+                                    <constraint firstItem="Yrp-m4-FjP" firstAttribute="leading" secondItem="9Xo-re-3Ar" secondAttribute="leading" constant="20" id="vt8-oJ-ziV"/>
+                                    <constraint firstItem="Yrp-m4-FjP" firstAttribute="top" secondItem="Pfa-tn-xr1" secondAttribute="bottom" constant="8" id="zA7-Ah-hh6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0033627744329597382" green="0.003345529435867637" blue="0.0033800194300518394" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Xo-re-3Ar" secondAttribute="trailing" constant="16" id="Eo1-iV-5tG"/>
+                            <constraint firstItem="9Xo-re-3Ar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="NI5-fU-v8k"/>
+                            <constraint firstItem="uxK-5P-jfd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ObL-Bc-SrK"/>
+                            <constraint firstItem="oy6-1G-Yu7" firstAttribute="top" secondItem="9Xo-re-3Ar" secondAttribute="bottom" constant="8" id="VZA-u1-0vs"/>
+                            <constraint firstAttribute="bottom" secondItem="uxK-5P-jfd" secondAttribute="bottom" id="bE5-CN-vAN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oy6-1G-Yu7" secondAttribute="trailing" constant="16" id="bsD-eW-EUN"/>
+                            <constraint firstItem="oy6-1G-Yu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fIo-g1-1b5"/>
+                            <constraint firstItem="uxK-5P-jfd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jyM-FR-OMF"/>
+                            <constraint firstItem="uxK-5P-jfd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mkq-lN-Y9E"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="oy6-1G-Yu7" secondAttribute="bottom" constant="20" id="ppN-fK-zZr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="clockBackgroundSeg" destination="BpB-ot-5Gk" id="ZuH-qu-Em7"/>
+                        <outlet property="clockColorSeg" destination="Yrp-m4-FjP" id="bB3-pw-Sqa"/>
+                        <outlet property="lable" destination="uxK-5P-jfd" id="bhK-Kf-7cK"/>
+                        <outlet property="settingsButton" destination="oy6-1G-Yu7" id="GP5-qo-2xB"/>
+                        <outlet property="settingsView" destination="9Xo-re-3Ar" id="5Fr-wp-Ivc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
